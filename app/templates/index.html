@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h1>
+    Hello, {{ context.user.username }}!!!!
+</h1>
+<hr>
 {% for post in context.posts %}
 <div>
     <p>
