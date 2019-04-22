@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>
-    Hello, {{ context.user.username }}!!!!
+    Hello, {{ current_user.username }}!
 </h1>
 <hr>
 {% for post in context.posts %}
