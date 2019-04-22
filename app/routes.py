@@ -1,9 +1,17 @@
+from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request
 from flask_login import login_user, current_user, logout_user, login_required
 from werkzeug.urls import url_parse
 from app import app, db
-from app.forms import LoginForm, RegistrationForm
+from app.forms import LoginForm, RegistrationForm, EditProfileForm
 from app.models import User
+
+
+@app.before_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.utcnow()
+        db.session.commit()
 
 
 @app.route('/')
@@ -62,7 +70,7 @@ def logout():
 def register():
     if current_user.is_authenticated:
         return redirect(url_for('index'))
-    template = 'registration.html'
+    template = 'register.html'
     title = 'Registration'
     form = RegistrationForm()
     if not form.validate_on_submit():
@@ -76,3 +84,41 @@ def register():
     flash('Congratulations! You have been registered. Please login.')
     return redirect(url_for('login'))
 
+
+@app.route('/user/<username>')
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    template = 'user.html'
+    title = user.username
+    context = {
+        'user': user,
+        'posts': [
+            {
+                'author': user,
+                'body': 'Test post #1'
+            },
+            {
+                'author': user,
+                'body': 'Test post #2'
+            },
+        ]
+    }
+    return render_template(template, title=title, context=context)
+
+
+@login_required
+@app.route('/edit_profile', methods=['GET', 'POST'])
+def edit_profile():
+    template = 'edit_profile.html'
+    title = 'Edit Profile'
+    form = EditProfileForm()
+    if request.method == 'GET':
+        form.username.data = current_user.username
+        form.about_me.data = current_user.about_me
+    if not form.validate_on_submit():
+        return render_template(template, title=title, form=form)
+    # POST request with form data validated
+    current_user.username = form.username.data
+    current_user.about_me = form.about_me.data
+    db.session.commit()
+    return redirect(url_for('user', username=current_user.username))
