@@ -20,13 +20,25 @@
                 Last seen on: {{ context.user.last_seen }}
             </p>
             {% endif %}
-            {% if context.user == current_user %}
             <p>
+                {{ context.user.followed.count() }} following,
+                {{ context.user.followers.count() }} followers.
+            </p>
+            <p>
+                {% if current_user == context.user %}
                 <a href="{{ url_for('edit_profile') }}">
                     Edit Profile
                 </a>
+                {% elif current_user.is_following(context.user) %}
+                <a href="{{ url_for('unfollow', username=context.user.username) }}">
+                    Unfollow
+                </a>
+                {% else %}
+                <a href="{{ url_for('follow', username=context.user.username) }}">
+                    Follow
+                </a>
+                {% endif %}
             </p>
-            {% endif %}
         </td>
     </tr>
 </table>
