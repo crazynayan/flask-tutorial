@@ -111,7 +111,7 @@ def user(username):
 def edit_profile():
     template = 'edit_profile.html'
     title = 'Edit Profile'
-    form = EditProfileForm()
+    form = EditProfileForm(current_user.username)
     if request.method == 'GET':
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
