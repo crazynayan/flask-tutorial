@@ -4,12 +4,33 @@
 <h1>
     Hello, {{ current_user.username }}!
 </h1>
-<hr>
-{% for post in context.posts %}
-<div>
+{% if form %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
     <p>
-        {{ post.author.username }} says: <b>{{ post.body }}</b>
+        {{ form.post.label }}
+        <br>
+        {{ form.post(cols=40, rows=4) }}
+        <br>
+        {% for errors in form.post.errors %}
+        <span style="color: red;">
+            {{ error }}
+        </span>
+        {% endfor %}
     </p>
-</div>
+    <p>
+        {{ form.submit }}
+    </p>
+</form>
+{% endif %}
+<hr>
+{% for post in posts %}
+{% include '_post.html' %}
 {% endfor %}
+{% if prev_url %}
+<a href="{{ prev_url }}">Newer posts</a>
+{% endif %}
+{% if next_url %}
+<a href="{{ next_url }}">Older posts</a>
+{% endif %}
 {% endblock %}
