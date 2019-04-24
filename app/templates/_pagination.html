@@ -1,0 +1,34 @@
+<nav aria-label="Page navigation">
+    <ul class="pager">
+        {% if prev_url %}
+        <li class="previous">
+            <a href="{{ prev_url }}">
+                <span aria-hidden="true">&larr;</span>
+                Newer posts
+            </a>
+        </li>
+        {% else %}
+        <li class="previous disabled">
+            <a href="#">
+                <span aria-hidden="true">&larr;</span>
+                Newer posts
+            </a>
+        </li>
+        {% endif %}
+        {% if next_url %}
+        <li class="next">
+            <a href="{{ next_url }}">
+                <span aria-hidden="true">&rarr;</span>
+                Older posts
+            </a>
+        </li>
+        {% else %}
+        <li class="next disabled">
+            <a href="#">
+                <span aria-hidden="true">&rarr;</span>
+                Older posts
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
