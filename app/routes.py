@@ -1,10 +1,13 @@
 from datetime import datetime
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, g, jsonify
 from flask_login import login_user, current_user, logout_user, login_required
 from werkzeug.urls import url_parse
+from flask_babel import get_locale
+from guess_language import guess_language
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm
 from app.models import User, Post
+from app.translate import translate_post
 
 
 @app.before_request
@@ -12,6 +15,7 @@ def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
+    g.locale = str(get_locale())
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -27,7 +31,10 @@ def index():
     prev_url = url_for('index', page=posts.prev_num) if posts.has_prev else None
     if not form.validate_on_submit():
         return render_template(template, title=title, posts=posts.items, form=form, next_url=next_url, prev_url=prev_url)
-    post = Post(author=current_user, body=form.post.data)
+    language = guess_language(form.post.data)
+    if language == 'UNKNOWN' or len(language) > 5:
+        language = ''
+    post = Post(author=current_user, body=form.post.data, language=language)
     db.session.add(post)
     db.session.commit()
     flash('Your post is now live')
@@ -152,3 +159,11 @@ def unfollow(username):
     flash(f'You are not following {username}!')
     return redirect(url_for('user', username=username))
 
+
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+    translated_text = {
+        'text': translate_post(request.form['text'], request.form['to_language']),
+    }
+    return jsonify(translated_text)

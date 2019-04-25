@@ -70,5 +70,18 @@ Welcome to Microblog!
 {% block scripts %}
 {{ super() }}
 {{ moment.include_moment() }}
+<script>
+    function translate(post_id, translation_id, to_language) {
+        $(translation_id).html('<img src="{{ url_for('static', filename='loading.gif') }}">');
+        $.post('/translate', {
+            text: $(post_id).text(),
+            to_language: to_language
+        }).done(function(response) {
+            $(translation_id).text(response['text'])
+        }).fail(function() {
+            $(translation_id).text("Error: could not contact server")
+        });
+    }
+</script>
 {% endblock %}
 

@@ -9,4 +9,6 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     POSTS_PER_PAGE = 25
+    LANGUAGES = ['en']
+    TRANSLATE_KEY = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
 
