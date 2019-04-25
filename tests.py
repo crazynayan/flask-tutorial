@@ -1,18 +1,27 @@
 import unittest
 from datetime import datetime, timedelta
 from hashlib import md5
-from app import app, db
+from app import db, create_app
 from app.models import User, Post
+from config import Config
+
+
+class TestConfig(Config):
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'
 
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
+        self.app = create_app(TestConfig)
+        self.app_context = self.app.app_context()
+        self.app_context.push()
         db.create_all()
 
     def tearDown(self):
         db.session.remove()
         db.drop_all()
+        self.app_context.pop()
 
     def test_password_hashing(self):
         nayan = User(username='nayan')
@@ -107,4 +116,4 @@ class UserModelCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=0)
+    unittest.main(verbosity=2)

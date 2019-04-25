@@ -3,3 +3,4 @@ venv/
 __pycache__
 app.db
 translate_key.json
+.env
