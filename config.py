@@ -13,4 +13,4 @@ class Config(object):
     POSTS_PER_PAGE = 25
     LANGUAGES = ['en']
     TRANSLATE_KEY = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
-
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
