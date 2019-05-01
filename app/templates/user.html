@@ -29,13 +29,18 @@
                 <a href="{{ url_for('main.edit_profile') }}">
                     Edit Profile
                 </a>
-                {% elif current_user.is_following(user) %}
+                {% else %}
+                {% if current_user.is_following(user) %}
                 <a href="{{ url_for('main.unfollow', username=user.username) }}">
                     Unfollow
                 </a>
                 {% else %}
                 <a href="{{ url_for('main.follow', username=user.username) }}">
                     Follow
+                </a>
+                {% endif %}
+                <a href="{{ url_for('main.send_message', recipient=user.username) }}">
+                    Send private message
                 </a>
                 {% endif %}
             </p>

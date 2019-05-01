@@ -5,8 +5,8 @@ from flask_babel import get_locale
 from guess_language import guess_language
 from app import db
 from app.main import bp
-from app.main.forms import EditProfileForm, PostForm, SearchForm
-from app.models import User, Post
+from app.main.forms import EditProfileForm, PostForm, SearchForm, MessageForm
+from app.models import User, Post, Message, Notification
 from app.translate import translate_post
 
 
@@ -144,3 +144,46 @@ def search():
     next_url = url_for('main.search', q=page + 1) if total > page * posts_page else None
     prev_url = url_for('main.search', q=page - 1) if page > 1 else None
     return render_template(template, title=title, posts=posts, next_url=next_url, prev_url=prev_url)
+
+
+@bp.route('/send_message/<recipient>', methods=['GET', 'POST'])
+@login_required
+def send_message(recipient):
+    template = 'send_message.html'
+    title = 'Send Message'
+    user = User.query.filter_by(username=recipient).first_or_404()
+    form = MessageForm()
+    if not form.validate_on_submit():
+        return render_template(template, title=title, form=form, recipient=recipient)
+    message = Message(body=form.message.data, author=current_user, recipient=user)
+    db.session.add(message)
+    user.add_notification('unread_message_count', user.new_messages())
+    db.session.commit()
+    flash(f'Message sent to {recipient} successfully!')
+    return redirect(url_for('main.user', username=recipient))
+
+
+@bp.route('/messages')
+@login_required
+def messages():
+    template = 'messages.html'
+    title = 'Messages'
+    current_user.last_message_read_time = datetime.utcnow()
+    current_user.add_notification('unread_message_count', 0)
+    db.session.commit()
+    page = request.args.get('page', 1, type=int)
+    messages = current_user.messages_received.paginate(page, current_app.config['POSTS_PER_PAGE'], False)
+    next_url = url_for('main.index', page=messages.next_num) if messages.has_next else None
+    prev_url = url_for('main.index', page=messages.prev_num) if messages.has_prev else None
+    return render_template(template, title=title, messages=messages.items,  next_url=next_url, prev_url=prev_url)
+
+
+@bp.route('/notifications')
+@login_required
+def notifications():
+    since = request.args.get('since', 0.0, type=float)
+    notifications = current_user.notifications\
+        .filter(Notification.timestamp > since)\
+        .order_by(Notification.timestamp.asc())
+    notif_list = [{'name': n.name, 'data': n.get_data(), 'timestamp': n.timestamp} for n in notifications]
+    return jsonify(notif_list)
