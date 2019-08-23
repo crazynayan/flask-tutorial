@@ -5,3 +5,4 @@ app.db
 translate_key.json
 *.env
 app/__pycache__/
+*.pyc
