@@ -1,26 +1,16 @@
-FROM python:3.6-alpine
+FROM python:3.7
 
-RUN adduser -D microblog
-
-WORKDIR /home/microblog
-
-COPY app app
-COPY migrations migrations
-COPY microblog.py config.py boot.sh ./
-COPY translate_key.json ./
-
-RUN tr -d '\r' <boot.sh >temp.sh && mv temp.sh boot.sh
-RUN chmod +x boot.sh
+WORKDIR /usr/src/app
 
 COPY requirements.txt requirements.txt
-RUN python -m venv venv
-RUN venv/bin/pip install -r requirements.txt
-RUN venv/bin/pip install gunicorn pymysql
+
+RUN pip install -r requirements.txt
+RUN pip install gunicorn pymysql
+
+COPY . .
 
 ENV FLASK_APP microblog.py
 
-RUN chown -R microblog:microblog ./
-USER microblog
-
 EXPOSE 5000
-ENTRYPOINT ["./boot.sh"]
+
+ENTRYPOINT exec gunicorn -b :5000 --access-logfile - --error-logfile - microblog:app

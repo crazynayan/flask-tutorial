@@ -1,42 +1,81 @@
-2019-04-22 21:54:46,246 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 09:09:02,174 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 09:39:24,342 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 09:39:32,927 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 10:06:41,832 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 11:41:38,979 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 11:42:57,983 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 11:59:04,768 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 11:59:40,894 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 11:59:58,932 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 12:01:41,862 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 12:01:59,268 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 12:03:17,060 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 12:04:23,453 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-23 12:04:45,288 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:26]
-2019-04-25 11:56:00,017 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:30]
-2019-04-25 11:56:15,704 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:30]
-2019-04-25 11:56:31,797 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:30]
-2019-04-25 18:45:59,713 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:52]
-2019-04-27 11:58:44,040 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:56]
-2019-04-27 11:58:52,409 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:56]
-2019-04-27 12:02:43,705 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:56]
-2019-04-27 12:14:38,594 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:57]
-2019-04-27 12:17:53,362 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:57]
-2019-04-27 12:20:35,554 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:57]
-2019-04-27 17:29:42,890 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:57]
-2019-04-27 17:46:37,761 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:57]
-2019-04-30 20:19:29,221 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:63]
-2019-05-01 11:21:51,121 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:63]
-2019-05-01 11:50:52,991 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:63]
-2019-05-01 11:51:42,164 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:63]
-2019-05-01 11:51:50,708 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:63]
-2019-05-01 12:40:53,337 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:63]
-2019-05-01 14:12:23,965 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:63]
-2019-05-01 14:13:08,966 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:63]
-2019-05-01 14:13:29,767 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:63]
-2019-05-02 16:30:44,931 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:66]
-2019-05-02 16:31:37,232 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:66]
-2019-05-02 16:31:44,995 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:66]
-2019-05-02 17:22:59,382 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:66]
-2019-05-02 17:35:40,954 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:66]
-2019-05-02 17:37:20,572 INFO: Microblog startup [in C:\Users\Nayan\PycharmProjects\flask-tutorial\app\__init__.py:66]
+2019-10-30 13:04:31,443 ERROR: Exception on /index [POST] [in C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 220, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\util\retry.py", line 344, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\packages\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000026294BBB160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\app\main\routes.py", line 40, in index
+    db.session.commit()
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1026, in commit
+    self.transaction.commit()
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\sqlalchemy\orm\session.py", line 500, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\sqlalchemy\event\attr.py", line 259, in __call__
+    fn(*args, **kw)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\app\models.py", line 37, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\app\search.py", line 10, in add_to_index
+    current_app.elasticsearch.index(index=index, id=model.id, body=payload)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\elasticsearch\client\utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\elasticsearch\client\__init__.py", line 362, in index
+    body=body,
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\elasticsearch\transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "C:\Users\Nayan\PycharmProjects\flask-tutorial\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 232, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x0000026294BBB160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000026294BBB160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
