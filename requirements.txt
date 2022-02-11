@@ -29,7 +29,7 @@ itsdangerous==1.1.0
 Jinja2==2.10.1
 Mako==1.0.9
 MarkupSafe==1.1.1
-protobuf==3.7.1
+protobuf==3.15.0
 pyasn1==0.4.5
 pyasn1-modules==0.2.5
 Pygments==2.3.1
